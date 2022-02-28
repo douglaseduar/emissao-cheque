@@ -117,6 +117,21 @@ object Form2: TForm2
     TabOrder = 6
     OnClick = Button1Click
   end
+  object Button2: TButton
+    Left = 376
+    Top = 344
+    Width = 158
+    Height = 41
+    Caption = 'Imprimir Cheques'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = Button2Click
+  end
   object FDQuery1: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (

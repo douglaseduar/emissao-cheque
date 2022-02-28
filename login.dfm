@@ -76,7 +76,6 @@ object Form1: TForm1
       'Database=emissao_cheque'
       'User_Name=root'
       'DriverID=MySQL')
-    Connected = True
     Left = 392
     Top = 40
   end

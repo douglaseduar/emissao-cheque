@@ -3,7 +3,7 @@
 
 Sistema feito para Emissão de Cheque em folha A4 com save em banco de dados.
 
-##Funcionalidades:
+## Funcionalidades:
 
 ``` 
 - Banco de dados MySQL

@@ -2,7 +2,7 @@ object Form4: TForm4
   Left = 0
   Top = 0
   Caption = 'Form4'
-  ClientHeight = 377
+  ClientHeight = 386
   ClientWidth = 521
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -27,6 +27,19 @@ object Form4: TForm4
     Font.Style = [fsBold]
     ParentFont = False
   end
+  object Label2: TLabel
+    Left = 56
+    Top = 355
+    Width = 238
+    Height = 13
+    Caption = '*Selecionar cheques pelo id e separar com virgula'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object Button1: TButton
     Left = 0
     Top = 0
@@ -46,9 +59,8 @@ object Form4: TForm4
     Left = 0
     Top = 128
     Width = 521
-    Height = 249
-    Align = alBottom
-    DataSource = DataSource1
+    Height = 169
+    DataSource = DataSource2
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -103,6 +115,29 @@ object Form4: TForm4
         Visible = True
       end>
   end
+  object input_numcheque: TEdit
+    Left = 56
+    Top = 328
+    Width = 238
+    Height = 21
+    TabOrder = 2
+    TextHint = 'Ex. 1,2,3,5,10'
+  end
+  object Button2: TButton
+    Left = 300
+    Top = 326
+    Width = 141
+    Height = 42
+    Caption = 'Gerar Relat'#243'rio'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = Button2Click
+  end
   object DataSource1: TDataSource
     DataSet = FDQueryteste
     Left = 184
@@ -124,6 +159,7 @@ object Form4: TForm4
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object FDQuerytestevalor: TSingleField
       FieldName = 'valor'
@@ -177,5 +213,23 @@ object Form4: TForm4
     VendorLib = 'C:\Users\Acer\Documents\libmysql.dll'
     Left = 392
     Top = 104
+  end
+  object FDQuerytabela: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from cheques')
+    Left = 136
+    Top = 104
+  end
+  object DataSource2: TDataSource
+    DataSet = FDQuerytabela
+    Left = 328
+    Top = 200
+  end
+  object FDQueryUpdate: TFDQuery
+    Connection = FDConnection1
+    Left = 56
+    Top = 272
   end
 end

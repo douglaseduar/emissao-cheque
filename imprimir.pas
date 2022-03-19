@@ -53,6 +53,8 @@ implementation
 
 uses cadastro, relatorio;
 
+
+
 procedure TForm4.Button1Click(Sender: TObject);
 begin
  Form2.Show;

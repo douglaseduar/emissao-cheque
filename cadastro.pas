@@ -192,18 +192,18 @@ resultado := valorPorExtenso(StrToFloat(input_valor.Text));
 FDQuery1.SQL.Clear;
   FDQuery1.SQL.Add('insert into cheques (valor, extenso, beneficiario, dia, mes, ano, status) values (:valor, :extenso, :beneficiario, :dia, :mes, :ano, ''Aguardando Impressão'')');
   FDQuery1.ParamByName('valor').AsFloat := strtofloat(input_valor.Text);
-  FDQuery1.ParamByName('extenso').AsString := resultado;
-  FDQuery1.ParamByName('beneficiario').AsString := input_beneficiario.Text;
+  FDQuery1.ParamByName('extenso').AsString := UpperCase(resultado);
+  FDQuery1.ParamByName('beneficiario').AsString := UpperCase(input_beneficiario.Text);
   if(CheckBox1.Checked) then
   begin
   FDQuery1.ParamByName('dia').AsString := formatdatetime('dd', now);
-  FDQuery1.ParamByName('mes').AsString := formatdatetime('mmmm', now);
+  FDQuery1.ParamByName('mes').AsString := UpperCase(formatdatetime('mmmm', now));
   FDQuery1.ParamByName('ano').AsString := formatdatetime('yyyy', now);
   end
 else
   begin
   FDQuery1.ParamByName('dia').AsString := input_dia.Text;
-  FDQuery1.ParamByName('mes').AsString := input_mes.Text;
+  FDQuery1.ParamByName('mes').AsString := UpperCase(input_mes.Text);
   FDQuery1.ParamByName('ano').AsString := input_ano.Text;
   end;
   FDQuery1.ExecSQL;
@@ -217,6 +217,9 @@ end;
 
 procedure TForm2.Button2Click(Sender: TObject);
 begin
+imprimir.Form4.FDQuerytabela.SQL.Clear;
+imprimir.Form4.FDQuerytabela.SQL.Add('SELECT * FROM cheques');
+imprimir.Form4.FDQuerytabela.Open;
  Form4.Show;
  Form2.Visible := false;
 end;

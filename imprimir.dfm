@@ -215,7 +215,6 @@ object Form4: TForm4
     Top = 104
   end
   object FDQuerytabela: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cheques')

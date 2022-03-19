@@ -19,7 +19,6 @@ type
     RLDBText7: TRLDBText;
     RLDBText8: TRLDBText;
     RLLabel1: TRLLabel;
-    RLLabel2: TRLLabel;
   private
     { Private declarations }
   public

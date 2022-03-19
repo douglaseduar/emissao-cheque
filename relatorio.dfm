@@ -33,87 +33,134 @@ object Form5: TForm5
         Left = 604
         Top = 16
         Width = 30
-        Height = 16
+        Height = 15
         DataField = 'valor'
         DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
         Text = ''
       end
       object RLDBText2: TRLDBText
         Left = 192
         Top = 40
-        Width = 50
-        Height = 16
+        Width = 44
+        Height = 15
         DataField = 'extenso'
         DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
         Text = ''
       end
       object RLDBText3: TRLDBText
         Left = 192
         Top = 80
-        Width = 69
-        Height = 16
+        Width = 65
+        Height = 15
         DataField = 'beneficiario'
         DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
         Text = ''
       end
       object RLDBText4: TRLDBText
         Left = 528
         Top = 104
-        Width = 21
-        Height = 16
+        Width = 19
+        Height = 15
         DataField = 'dia'
         DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
         Text = ''
       end
       object RLDBText5: TRLDBText
         Left = 604
         Top = 104
-        Width = 29
-        Height = 16
+        Width = 24
+        Height = 15
         DataField = 'mes'
         DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
         Text = ''
       end
       object RLDBText6: TRLDBText
         Left = 680
         Top = 104
-        Width = 25
-        Height = 16
+        Width = 23
+        Height = 15
         DataField = 'ano'
         DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
         Text = ''
       end
       object RLDBText7: TRLDBText
         Left = 16
         Top = 40
-        Width = 69
-        Height = 16
+        Width = 65
+        Height = 15
         DataField = 'beneficiario'
         DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
         Text = ''
       end
       object RLDBText8: TRLDBText
         Left = 16
         Top = 80
         Width = 30
-        Height = 16
+        Height = 15
         DataField = 'valor'
         DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
         Text = ''
       end
       object RLLabel1: TRLLabel
-        Left = 416
+        Left = 392
         Top = 104
-        Width = 96
-        Height = 16
-        Caption = 'Uni'#227'o da Vit'#243'ria'
-      end
-      object RLLabel2: TRLLabel
-        Left = 578
-        Top = 16
-        Width = 20
-        Height = 16
-        Caption = 'R$'
+        Width = 123
+        Height = 15
+        Caption = 'UNI'#195'O DA VIT'#211'RIA,'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
       end
     end
   end

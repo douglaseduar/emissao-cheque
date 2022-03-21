@@ -1,7 +1,7 @@
 object Form2: TForm2
   Left = 0
   Top = 0
-  Caption = 'Form2'
+  Caption = 'CADASTRO DE CHEQUE'
   ClientHeight = 388
   ClientWidth = 536
   Color = clBtnFace

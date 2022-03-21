@@ -191,13 +191,13 @@ begin
 resultado := valorPorExtenso(StrToFloat(input_valor.Text));
 FDQuery1.SQL.Clear;
   FDQuery1.SQL.Add('insert into cheques (valor, extenso, beneficiario, dia, mes, ano, status) values (:valor, :extenso, :beneficiario, :dia, :mes, :ano, ''Aguardando Impressão'')');
-  FDQuery1.ParamByName('valor').AsFloat := strtofloat(input_valor.Text);
-  FDQuery1.ParamByName('extenso').AsString := UpperCase(resultado);
-  FDQuery1.ParamByName('beneficiario').AsString := UpperCase(input_beneficiario.Text);
+  FDQuery1.ParamByName('valor').AsString := formatfloat('#,##0.00', strtofloat(input_valor.Text));
+  FDQuery1.ParamByName('extenso').AsString := AnsiUpperCase(resultado);
+  FDQuery1.ParamByName('beneficiario').AsString := AnsiUpperCase(input_beneficiario.Text);
   if(CheckBox1.Checked) then
   begin
   FDQuery1.ParamByName('dia').AsString := formatdatetime('dd', now);
-  FDQuery1.ParamByName('mes').AsString := UpperCase(formatdatetime('mmmm', now));
+  FDQuery1.ParamByName('mes').AsString := AnsiUpperCase(formatdatetime('mmmm', now));
   FDQuery1.ParamByName('ano').AsString := formatdatetime('yyyy', now);
   end
 else

@@ -29,21 +29,6 @@ object Form5: TForm5
       Top = 38
       Width = 718
       Height = 155
-      object RLDBText1: TRLDBText
-        Left = 604
-        Top = 16
-        Width = 30
-        Height = 15
-        DataField = 'valor'
-        DataSource = Form4.DataSource1
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clBlack
-        Font.Height = -13
-        Font.Name = 'Times New Roman'
-        Font.Style = []
-        ParentFont = False
-        Text = ''
-      end
       object RLDBText2: TRLDBText
         Left = 192
         Top = 40
@@ -161,6 +146,21 @@ object Form5: TForm5
         Font.Name = 'Times New Roman'
         Font.Style = []
         ParentFont = False
+      end
+      object RLDBText9: TRLDBText
+        Left = 598
+        Top = 24
+        Width = 30
+        Height = 15
+        DataField = 'valor'
+        DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
       end
     end
   end

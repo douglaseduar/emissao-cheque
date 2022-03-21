@@ -10,7 +10,6 @@ type
   TForm5 = class(TForm)
     rl_cheque: TRLReport;
     RLBand1: TRLBand;
-    RLDBText1: TRLDBText;
     RLDBText2: TRLDBText;
     RLDBText3: TRLDBText;
     RLDBText4: TRLDBText;
@@ -19,6 +18,7 @@ type
     RLDBText7: TRLDBText;
     RLDBText8: TRLDBText;
     RLLabel1: TRLLabel;
+    RLDBText9: TRLDBText;
   private
     { Private declarations }
   public

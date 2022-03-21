@@ -1,7 +1,7 @@
 object Form4: TForm4
   Left = 0
   Top = 0
-  Caption = 'Form4'
+  Caption = 'IMPRIMIR CHEQUES'
   ClientHeight = 386
   ClientWidth = 521
   Color = clBtnFace
@@ -33,6 +33,19 @@ object Form4: TForm4
     Width = 238
     Height = 13
     Caption = '*Selecionar cheques pelo id e separar com virgula'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 328
+    Top = 309
+    Width = 62
+    Height = 13
+    Caption = '*Quantidade'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -11
@@ -124,7 +137,7 @@ object Form4: TForm4
     TextHint = 'Ex. 1,2,3,5,10'
   end
   object Button2: TButton
-    Left = 300
+    Left = 380
     Top = 326
     Width = 141
     Height = 42
@@ -138,6 +151,14 @@ object Form4: TForm4
     TabOrder = 3
     OnClick = Button2Click
   end
+  object input_qtd: TEdit
+    Left = 328
+    Top = 328
+    Width = 46
+    Height = 21
+    TabOrder = 4
+    Text = '1'
+  end
   object DataSource1: TDataSource
     DataSet = FDQueryteste
     Left = 184
@@ -147,58 +168,6 @@ object Form4: TForm4
     Provider = 'Forms'
     Left = 32
     Top = 80
-  end
-  object FDQueryteste: TFDQuery
-    Active = True
-    Connection = FDConnection1
-    SQL.Strings = (
-      'SELECT * FROM `cheques`')
-    Left = 24
-    Top = 128
-    object FDQuerytesteid: TFDAutoIncField
-      FieldName = 'id'
-      Origin = 'id'
-      ProviderFlags = [pfInWhere, pfInKey]
-      ReadOnly = True
-    end
-    object FDQuerytestevalor: TSingleField
-      FieldName = 'valor'
-      Origin = 'valor'
-      Required = True
-    end
-    object FDQuerytesteextenso: TStringField
-      FieldName = 'extenso'
-      Origin = 'extenso'
-      Required = True
-      Size = 200
-    end
-    object FDQuerytestebeneficiario: TStringField
-      FieldName = 'beneficiario'
-      Origin = 'beneficiario'
-      Required = True
-      Size = 200
-    end
-    object FDQuerytestedia: TStringField
-      FieldName = 'dia'
-      Origin = 'dia'
-      Required = True
-    end
-    object FDQuerytestemes: TStringField
-      FieldName = 'mes'
-      Origin = 'mes'
-      Required = True
-    end
-    object FDQuerytesteano: TStringField
-      FieldName = 'ano'
-      Origin = 'ano'
-      Required = True
-    end
-    object FDQuerytestestatus: TStringField
-      FieldName = 'status'
-      Origin = 'status'
-      Required = True
-      Size = 50
-    end
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -230,5 +199,13 @@ object Form4: TForm4
     Connection = FDConnection1
     Left = 56
     Top = 272
+  end
+  object FDQueryteste: TFDQuery
+    DetailFields = 'ano;beneficiario;dia;extenso;id;mes;status;valor'
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from cheques')
+    Left = 40
+    Top = 168
   end
 end

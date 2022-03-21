@@ -19,23 +19,17 @@ type
     DBGrid1: TDBGrid;
     DataSource1: TDataSource;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
-    FDQueryteste: TFDQuery;
     FDConnection1: TFDConnection;
     FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
-    FDQuerytesteid: TFDAutoIncField;
-    FDQuerytestevalor: TSingleField;
-    FDQuerytesteextenso: TStringField;
-    FDQuerytestebeneficiario: TStringField;
-    FDQuerytestedia: TStringField;
-    FDQuerytestemes: TStringField;
-    FDQuerytesteano: TStringField;
-    FDQuerytestestatus: TStringField;
     input_numcheque: TEdit;
     Label2: TLabel;
     Button2: TButton;
     FDQuerytabela: TFDQuery;
     DataSource2: TDataSource;
     FDQueryUpdate: TFDQuery;
+    FDQueryteste: TFDQuery;
+    input_qtd: TEdit;
+    Label3: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
@@ -63,11 +57,22 @@ end;
 
 procedure TForm4.Button2Click(Sender: TObject);
 begin
-var numeros: String;
+var numeros, aux1: String;
+var qtd: Integer;
+var aux: String;
+var I: Integer;
+qtd := strtoint(input_qtd.Text);
 numeros := input_numcheque.Text;
 var numerosdivididos := StringReplace(numeros, ',', ' or id = ', [rfReplaceALL, rfIgnoreCase]);
+aux := 'SELECT valor, extenso, beneficiario, dia, mes, ano FROM cheques WHERE id = ' + numerosdivididos;
+aux1 := 'SELECT valor, extenso, beneficiario, dia, mes, ano FROM cheques WHERE id = ' + numerosdivididos;
+
+for I := 1 to qtd-1 do
+begin
+  aux := aux + ' UNION ALL ' + aux1;
+end;
 FDQueryteste.SQL.Clear;
-FDQueryteste.SQL.Add('SELECT * FROM cheques WHERE id = ' + numerosdivididos);
+FDQueryteste.SQL.Add(aux);
 FDQueryteste.Open;
 FDQueryUpdate.SQL.Clear;
 FDQueryUpdate.SQL.Add('update cheques set status = "Impresso" where id = ' + numerosdivididos);

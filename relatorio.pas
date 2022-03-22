@@ -19,6 +19,9 @@ type
     RLDBText8: TRLDBText;
     RLLabel1: TRLLabel;
     RLDBText9: TRLDBText;
+    RLBand2: TRLBand;
+    RLDBText1: TRLDBText;
+    RLDBText10: TRLDBText;
   private
     { Private declarations }
   public
@@ -33,5 +36,7 @@ implementation
 {$R *.dfm}
 
 uses imprimir;
+
+
 
 end.

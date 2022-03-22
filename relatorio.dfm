@@ -26,14 +26,15 @@ object Form5: TForm5
     Font.Style = []
     object RLBand1: TRLBand
       Left = 38
-      Top = 38
+      Top = 115
       Width = 718
-      Height = 155
+      Height = 297
       object RLDBText2: TRLDBText
         Left = 192
         Top = 40
-        Width = 44
-        Height = 15
+        Width = 513
+        Height = 34
+        AutoSize = False
         DataField = 'extenso'
         DataSource = Form4.DataSource1
         Font.Charset = ANSI_CHARSET
@@ -46,7 +47,7 @@ object Form5: TForm5
       end
       object RLDBText3: TRLDBText
         Left = 192
-        Top = 80
+        Top = 88
         Width = 65
         Height = 15
         DataField = 'beneficiario'
@@ -61,7 +62,7 @@ object Form5: TForm5
       end
       object RLDBText4: TRLDBText
         Left = 528
-        Top = 104
+        Top = 112
         Width = 19
         Height = 15
         DataField = 'dia'
@@ -76,7 +77,7 @@ object Form5: TForm5
       end
       object RLDBText5: TRLDBText
         Left = 604
-        Top = 104
+        Top = 112
         Width = 24
         Height = 15
         DataField = 'mes'
@@ -91,7 +92,7 @@ object Form5: TForm5
       end
       object RLDBText6: TRLDBText
         Left = 680
-        Top = 104
+        Top = 112
         Width = 23
         Height = 15
         DataField = 'ano'
@@ -105,10 +106,11 @@ object Form5: TForm5
         Text = ''
       end
       object RLDBText7: TRLDBText
-        Left = 16
-        Top = 40
+        Left = 3
+        Top = 59
         Width = 65
         Height = 15
+        AutoSize = False
         DataField = 'beneficiario'
         DataSource = Form4.DataSource1
         Font.Charset = ANSI_CHARSET
@@ -120,8 +122,8 @@ object Form5: TForm5
         Text = ''
       end
       object RLDBText8: TRLDBText
-        Left = 16
-        Top = 80
+        Left = 3
+        Top = 112
         Width = 30
         Height = 15
         DataField = 'valor'
@@ -136,7 +138,7 @@ object Form5: TForm5
       end
       object RLLabel1: TRLLabel
         Left = 392
-        Top = 104
+        Top = 112
         Width = 123
         Height = 15
         Caption = 'UNI'#195'O DA VIT'#211'RIA,'
@@ -148,8 +150,8 @@ object Form5: TForm5
         ParentFont = False
       end
       object RLDBText9: TRLDBText
-        Left = 598
-        Top = 24
+        Left = 550
+        Top = 6
         Width = 30
         Height = 15
         DataField = 'valor'
@@ -162,6 +164,45 @@ object Form5: TForm5
         ParentFont = False
         Text = ''
       end
+      object RLDBText1: TRLDBText
+        Left = 3
+        Top = 176
+        Width = 19
+        Height = 15
+        DataField = 'dia'
+        DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText10: TRLDBText
+        Left = 28
+        Top = 176
+        Width = 40
+        Height = 15
+        AutoSize = False
+        DataField = 'mes'
+        DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+    end
+    object RLBand2: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 77
+      BandType = btHeader
+      Transparent = False
     end
   end
 end

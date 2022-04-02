@@ -9,7 +9,7 @@ uses
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys,
   FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait,
-  FireDAC.Comp.UI, Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet;
+  FireDAC.Comp.UI, Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet, Vcl.Mask;
 
 type
   TForm2 = class(TForm)
@@ -29,6 +29,9 @@ type
     FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     Button2: TButton;
+    Label5: TLabel;
+    input_bompara: TMaskEdit;
+    input_cruzado: TCheckBox;
     procedure CheckBox1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -190,7 +193,7 @@ var
 begin
 resultado := valorPorExtenso(StrToFloat(input_valor.Text));
 FDQuery1.SQL.Clear;
-  FDQuery1.SQL.Add('insert into cheques (valor, extenso, beneficiario, dia, mes, ano, status) values (:valor, :extenso, :beneficiario, :dia, :mes, :ano, ''Aguardando Impressão'')');
+  FDQuery1.SQL.Add('insert into cheques (valor, extenso, beneficiario, dia, mes, ano, status, bompara, cruzado) values (:valor, :extenso, :beneficiario, :dia, :mes, :ano, ''Aguardando Impressão'', :bompara, :cruzado)');
   FDQuery1.ParamByName('valor').AsString := formatfloat('#,##0.00', strtofloat(input_valor.Text));
   FDQuery1.ParamByName('extenso').AsString := AnsiUpperCase(resultado);
   FDQuery1.ParamByName('beneficiario').AsString := AnsiUpperCase(input_beneficiario.Text);
@@ -206,6 +209,15 @@ else
   FDQuery1.ParamByName('mes').AsString := UpperCase(input_mes.Text);
   FDQuery1.ParamByName('ano').AsString := input_ano.Text;
   end;
+  FDQuery1.ParamByName('bompara').AsString := input_bompara.Text;
+  if(input_cruzado.Checked) then
+  begin
+  FDQuery1.ParamByName('cruzado').AsInteger := 1;
+  end
+  else
+  begin
+   FDQuery1.ParamByName('cruzado').AsInteger := 0;
+  end;
   FDQuery1.ExecSQL;
   ShowMessage('Cheque Cadastrado com sucesso!');
   input_valor.Clear;
@@ -213,6 +225,9 @@ else
   input_dia.Clear;
   input_mes.Clear;
   input_ano.CLear;
+  input_bompara.Clear;
+  input_cruzado.Checked := false;
+  CheckBox1.Checked := false;
 end;
 
 procedure TForm2.Button2Click(Sender: TObject);

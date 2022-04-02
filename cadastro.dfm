@@ -2,8 +2,8 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'CADASTRO DE CHEQUE'
-  ClientHeight = 388
-  ClientWidth = 536
+  ClientHeight = 469
+  ClientWidth = 534
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -59,6 +59,19 @@ object Form2: TForm2
     Height = 16
     Caption = 'Uni'#227'o da Vit'#243'ria,            /                      / '
   end
+  object Label5: TLabel
+    Left = 343
+    Top = 304
+    Width = 103
+    Height = 23
+    Caption = 'BOM PARA'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object input_valor: TEdit
     Left = 384
     Top = 96
@@ -110,16 +123,16 @@ object Form2: TForm2
   end
   object Button1: TButton
     Left = 224
-    Top = 328
+    Top = 400
     Width = 75
     Height = 25
     Caption = 'Cadastrar'
-    TabOrder = 6
+    TabOrder = 8
     OnClick = Button1Click
   end
   object Button2: TButton
     Left = 376
-    Top = 344
+    Top = 424
     Width = 158
     Height = 41
     Caption = 'Imprimir Cheques'
@@ -129,8 +142,26 @@ object Form2: TForm2
     Font.Name = 'Tahoma'
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
-    TabOrder = 7
+    TabOrder = 9
     OnClick = Button2Click
+  end
+  object input_bompara: TMaskEdit
+    Left = 362
+    Top = 333
+    Width = 61
+    Height = 24
+    EditMask = '!99/99/00;1;_'
+    MaxLength = 8
+    TabOrder = 7
+    Text = '  /  /  '
+  end
+  object input_cruzado: TCheckBox
+    Left = 58
+    Top = 320
+    Width = 135
+    Height = 17
+    Caption = 'Cheque Cruzado?'
+    TabOrder = 6
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection1
@@ -155,7 +186,7 @@ object Form2: TForm2
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 64
-    Top = 312
+    Left = 40
+    Top = 376
   end
 end

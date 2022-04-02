@@ -195,6 +195,43 @@ object Form5: TForm5
         ParentFont = False
         Text = ''
       end
+      object RLLabel2: TRLLabel
+        Left = 550
+        Top = 208
+        Width = 108
+        Height = 22
+        Caption = 'BOM PARA'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLDBText11: TRLDBText
+        Left = 567
+        Top = 236
+        Width = 78
+        Height = 22
+        DataField = 'bompara'
+        DataSource = Form4.DataSource1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText12: TRLDBText
+        Left = 438
+        Top = 192
+        Width = 50
+        Height = 16
+        DataField = 'cruzado'
+        DataSource = Form4.DataSource1
+        Text = ''
+      end
     end
     object RLBand2: TRLBand
       Left = 38

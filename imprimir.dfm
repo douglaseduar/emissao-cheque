@@ -126,6 +126,16 @@ object Form4: TForm4
         Expanded = False
         FieldName = 'extenso'
         Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'bompara'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cruzado'
+        Visible = True
       end>
   end
   object input_numcheque: TEdit
@@ -184,6 +194,7 @@ object Form4: TForm4
     Top = 104
   end
   object FDQuerytabela: TFDQuery
+    DetailFields = 'ano;beneficiario;bompara;cruzado;dia;extenso;id;mes;status;valor'
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cheques')
@@ -201,7 +212,7 @@ object Form4: TForm4
     Top = 272
   end
   object FDQueryteste: TFDQuery
-    DetailFields = 'ano;beneficiario;dia;extenso;id;mes;status;valor'
+    DetailFields = 'ano;beneficiario;bompara;cruzado;dia;extenso;id;mes;status;valor'
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cheques')

@@ -22,6 +22,9 @@ type
     RLBand2: TRLBand;
     RLDBText1: TRLDBText;
     RLDBText10: TRLDBText;
+    RLLabel2: TRLLabel;
+    RLDBText11: TRLDBText;
+    RLDBText12: TRLDBText;
   private
     { Private declarations }
   public

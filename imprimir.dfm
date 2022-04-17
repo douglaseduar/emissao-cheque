@@ -28,9 +28,9 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 56
-    Top = 355
-    Width = 238
+    Left = 16
+    Top = 336
+    Width = 249
     Height = 13
     Caption = '*Selecionar cheques pelo id e separar com virgula'
     Font.Charset = DEFAULT_CHARSET
@@ -41,8 +41,8 @@ object Form4: TForm4
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 328
-    Top = 309
+    Left = 203
+    Top = 365
     Width = 62
     Height = 13
     Caption = '*Quantidade'
@@ -139,16 +139,16 @@ object Form4: TForm4
       end>
   end
   object input_numcheque: TEdit
-    Left = 56
-    Top = 328
-    Width = 238
+    Left = 16
+    Top = 309
+    Width = 249
     Height = 21
     TabOrder = 2
     TextHint = 'Ex. 1,2,3,5,10'
   end
   object Button2: TButton
-    Left = 380
-    Top = 326
+    Left = 332
+    Top = 322
     Width = 141
     Height = 42
     Caption = 'Gerar Relat'#243'rio'
@@ -162,12 +162,20 @@ object Form4: TForm4
     OnClick = Button2Click
   end
   object input_qtd: TEdit
-    Left = 328
-    Top = 328
+    Left = 151
+    Top = 359
     Width = 46
     Height = 21
     TabOrder = 4
     Text = '1'
+  end
+  object cruzadocheck: TCheckBox
+    Left = 16
+    Top = 361
+    Width = 129
+    Height = 17
+    Caption = 'Cheques Cruzados?'
+    TabOrder = 5
   end
   object DataSource1: TDataSource
     DataSet = FDQueryteste

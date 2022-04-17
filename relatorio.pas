@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage;
 
 type
   TForm5 = class(TForm)
@@ -24,7 +25,10 @@ type
     RLDBText10: TRLDBText;
     RLLabel2: TRLLabel;
     RLDBText11: TRLDBText;
-    RLDBText12: TRLDBText;
+    RLImage1: TRLImage;
+    procedure RLBand1BeforePrint(Sender: TObject; var PrintIt: Boolean);
+
+  //  procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,6 +37,7 @@ type
 
 var
   Form5: TForm5;
+  
 
 implementation
 
@@ -41,5 +46,20 @@ implementation
 uses imprimir;
 
 
+
+
+
+
+procedure TForm5.RLBand1BeforePrint(Sender: TObject; var PrintIt: Boolean);
+begin
+   if (Form4.cruzadocheck.Checked) then
+begin
+RLImage1.Visible := true;
+end
+else
+begin
+RLImage1.Visible := false;
+end;
+end;
 
 end.

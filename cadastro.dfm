@@ -127,7 +127,7 @@ object Form2: TForm2
     Width = 75
     Height = 25
     Caption = 'Cadastrar'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = Button1Click
   end
   object Button2: TButton
@@ -142,7 +142,7 @@ object Form2: TForm2
     Font.Name = 'Tahoma'
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
-    TabOrder = 9
+    TabOrder = 8
     OnClick = Button2Click
   end
   object input_bompara: TMaskEdit
@@ -152,16 +152,8 @@ object Form2: TForm2
     Height = 24
     EditMask = '!99/99/00;1;_'
     MaxLength = 8
-    TabOrder = 7
-    Text = '  /  /  '
-  end
-  object input_cruzado: TCheckBox
-    Left = 58
-    Top = 320
-    Width = 135
-    Height = 17
-    Caption = 'Cheque Cruzado?'
     TabOrder = 6
+    Text = '  /  /  '
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection1

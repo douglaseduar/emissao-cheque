@@ -30,6 +30,7 @@ type
     FDQueryteste: TFDQuery;
     input_qtd: TEdit;
     Label3: TLabel;
+    cruzadocheck: TCheckBox;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
@@ -64,8 +65,8 @@ var I: Integer;
 qtd := strtoint(input_qtd.Text);
 numeros := input_numcheque.Text;
 var numerosdivididos := StringReplace(numeros, ',', ' or id = ', [rfReplaceALL, rfIgnoreCase]);
-aux := 'SELECT valor, extenso, beneficiario, dia, mes, ano, bompara, cruzado FROM cheques WHERE id = ' + numerosdivididos;
-aux1 := 'SELECT valor, extenso, beneficiario, dia, mes, ano, bompara, cruzado FROM cheques WHERE id = ' + numerosdivididos;
+aux := 'SELECT valor, extenso, beneficiario, dia, mes, ano, bompara FROM cheques WHERE id = ' + numerosdivididos;
+aux1 := 'SELECT valor, extenso, beneficiario, dia, mes, ano, bompara FROM cheques WHERE id = ' + numerosdivididos;
 
 for I := 1 to qtd-1 do
 begin

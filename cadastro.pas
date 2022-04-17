@@ -31,7 +31,6 @@ type
     Button2: TButton;
     Label5: TLabel;
     input_bompara: TMaskEdit;
-    input_cruzado: TCheckBox;
     procedure CheckBox1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -193,7 +192,7 @@ var
 begin
 resultado := valorPorExtenso(StrToFloat(input_valor.Text));
 FDQuery1.SQL.Clear;
-  FDQuery1.SQL.Add('insert into cheques (valor, extenso, beneficiario, dia, mes, ano, status, bompara, cruzado) values (:valor, :extenso, :beneficiario, :dia, :mes, :ano, ''Aguardando Impressão'', :bompara, :cruzado)');
+  FDQuery1.SQL.Add('insert into cheques (valor, extenso, beneficiario, dia, mes, ano, status, bompara) values (:valor, :extenso, :beneficiario, :dia, :mes, :ano, ''Aguardando Impressão'', :bompara)');
   FDQuery1.ParamByName('valor').AsString := formatfloat('#,##0.00', strtofloat(input_valor.Text));
   FDQuery1.ParamByName('extenso').AsString := AnsiUpperCase(resultado);
   FDQuery1.ParamByName('beneficiario').AsString := AnsiUpperCase(input_beneficiario.Text);
@@ -210,14 +209,6 @@ else
   FDQuery1.ParamByName('ano').AsString := input_ano.Text;
   end;
   FDQuery1.ParamByName('bompara').AsString := input_bompara.Text;
-  if(input_cruzado.Checked) then
-  begin
-  FDQuery1.ParamByName('cruzado').AsInteger := 1;
-  end
-  else
-  begin
-   FDQuery1.ParamByName('cruzado').AsInteger := 0;
-  end;
   FDQuery1.ExecSQL;
   ShowMessage('Cheque Cadastrado com sucesso!');
   input_valor.Clear;
@@ -226,7 +217,6 @@ else
   input_mes.Clear;
   input_ano.CLear;
   input_bompara.Clear;
-  input_cruzado.Checked := false;
   CheckBox1.Checked := false;
 end;
 

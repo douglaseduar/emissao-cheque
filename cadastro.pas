@@ -200,7 +200,7 @@ FDQuery1.SQL.Clear;
   begin
   FDQuery1.ParamByName('dia').AsString := formatdatetime('dd', now);
   FDQuery1.ParamByName('mes').AsString := AnsiUpperCase(formatdatetime('mmmm', now));
-  FDQuery1.ParamByName('ano').AsString := formatdatetime('yyyy', now);
+  FDQuery1.ParamByName('ano').AsString := formatdatetime('yy', now);
   end
 else
   begin

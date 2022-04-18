@@ -18,6 +18,9 @@ object Form5: TForm5
     Top = -56
     Width = 794
     Height = 1123
+    Margins.TopMargin = 0.000000000000000000
+    Margins.RightMargin = 0.000000000000000000
+    Margins.BottomMargin = 0.000000000000000000
     DataSource = Form4.DataSource1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -26,9 +29,9 @@ object Form5: TForm5
     Font.Style = []
     object RLBand1: TRLBand
       Left = 38
-      Top = 109
-      Width = 718
-      Height = 324
+      Top = 0
+      Width = 756
+      Height = 288
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -13
@@ -37,10 +40,10 @@ object Form5: TForm5
       ParentFont = False
       BeforePrint = RLBand1BeforePrint
       object RLImage1: TRLImage
-        Left = 90
-        Top = 0
+        Left = 58
+        Top = 7
         Width = 234
-        Height = 273
+        Height = 194
         Picture.Data = {
           0954506E67496D61676589504E470D0A1A0A0000000D494844520000009C0000
           00B808060000001685856D000000097048597300000B1300000B1301009A9C18
@@ -163,8 +166,8 @@ object Form5: TForm5
           61F83F96B10F284C79B8480000000049454E44AE426082}
       end
       object RLDBText2: TRLDBText
-        Left = 192
-        Top = 40
+        Left = 206
+        Top = 46
         Width = 513
         Height = 34
         AutoSize = False
@@ -179,8 +182,8 @@ object Form5: TForm5
         Text = ''
       end
       object RLDBText3: TRLDBText
-        Left = 192
-        Top = 88
+        Left = 152
+        Top = 96
         Width = 65
         Height = 15
         DataField = 'beneficiario'
@@ -194,8 +197,8 @@ object Form5: TForm5
         Text = ''
       end
       object RLDBText4: TRLDBText
-        Left = 528
-        Top = 112
+        Left = 529
+        Top = 120
         Width = 19
         Height = 15
         DataField = 'dia'
@@ -210,7 +213,7 @@ object Form5: TForm5
       end
       object RLDBText5: TRLDBText
         Left = 604
-        Top = 112
+        Top = 120
         Width = 24
         Height = 15
         DataField = 'mes'
@@ -224,8 +227,8 @@ object Form5: TForm5
         Text = ''
       end
       object RLDBText6: TRLDBText
-        Left = 680
-        Top = 112
+        Left = 730
+        Top = 120
         Width = 23
         Height = 15
         DataField = 'ano'
@@ -270,8 +273,8 @@ object Form5: TForm5
         Text = ''
       end
       object RLLabel1: TRLLabel
-        Left = 392
-        Top = 112
+        Left = 400
+        Top = 120
         Width = 123
         Height = 15
         Caption = 'UNI'#195'O DA VIT'#211'RIA,'
@@ -283,8 +286,8 @@ object Form5: TForm5
         ParentFont = False
       end
       object RLDBText9: TRLDBText
-        Left = 550
-        Top = 6
+        Left = 585
+        Top = 21
         Width = 30
         Height = 15
         DataField = 'valor'
@@ -299,7 +302,7 @@ object Form5: TForm5
       end
       object RLDBText1: TRLDBText
         Left = 3
-        Top = 176
+        Top = 170
         Width = 19
         Height = 15
         DataField = 'dia'
@@ -314,7 +317,7 @@ object Form5: TForm5
       end
       object RLDBText10: TRLDBText
         Left = 28
-        Top = 176
+        Top = 170
         Width = 40
         Height = 15
         AutoSize = False
@@ -330,7 +333,7 @@ object Form5: TForm5
       end
       object RLLabel2: TRLLabel
         Left = 550
-        Top = 208
+        Top = 200
         Width = 108
         Height = 22
         Caption = 'BOM PARA'
@@ -343,7 +346,7 @@ object Form5: TForm5
       end
       object RLDBText11: TRLDBText
         Left = 567
-        Top = 236
+        Top = 220
         Width = 78
         Height = 22
         DataField = 'bompara'
@@ -356,21 +359,6 @@ object Form5: TForm5
         ParentFont = False
         Text = ''
       end
-    end
-    object RLBand2: TRLBand
-      Left = 38
-      Top = 38
-      Width = 718
-      Height = 71
-      BandType = btHeader
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -13
-      Font.Name = 'Arial'
-      Font.Orientation = 45
-      Font.Style = []
-      ParentFont = False
-      Transparent = False
     end
   end
 end

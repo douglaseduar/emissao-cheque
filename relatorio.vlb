@@ -31,9 +31,6 @@ Coordinates=258,78,88,36
 [RLLabel2]
 Coordinates=179,78,69,36
 
-[RLBand2]
-Coordinates=101,78,68,36
-
 [RLDBText1]
 Coordinates=10,78,81,36
 
@@ -47,6 +44,6 @@ Coordinates=151,10,81,36
 Coordinates=73,10,68,36
 
 []
-Coordinates=242,10,88,36
+Coordinates=101,78,68,36
 Visible=True
 

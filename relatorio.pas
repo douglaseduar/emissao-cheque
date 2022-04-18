@@ -20,7 +20,6 @@ type
     RLDBText8: TRLDBText;
     RLLabel1: TRLLabel;
     RLDBText9: TRLDBText;
-    RLBand2: TRLBand;
     RLDBText1: TRLDBText;
     RLDBText10: TRLDBText;
     RLLabel2: TRLLabel;

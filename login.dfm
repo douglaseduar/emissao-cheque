@@ -67,7 +67,7 @@ object Form1: TForm1
     Top = 160
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\Users\Acer\Documents\libmysql.dll'
+    VendorLib = 'C:\Users\Acer\Documents\Embarcadero\Studio\Projects\libmysql.dll'
     Left = 392
     Top = 104
   end

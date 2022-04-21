@@ -30,7 +30,7 @@ object Form4: TForm4
   object Label2: TLabel
     Left = 16
     Top = 336
-    Width = 249
+    Width = 238
     Height = 13
     Caption = '*Selecionar cheques pelo id e separar com virgula'
     Font.Charset = DEFAULT_CHARSET
@@ -197,7 +197,7 @@ object Form4: TForm4
     Top = 40
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\Users\Acer\Documents\libmysql.dll'
+    VendorLib = 'C:\Users\Acer\Documents\Embarcadero\Studio\Projects\libmysql.dll'
     Left = 392
     Top = 104
   end

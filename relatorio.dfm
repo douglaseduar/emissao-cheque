@@ -20,7 +20,7 @@ object Form5: TForm5
     Height = 1123
     Margins.TopMargin = 0.000000000000000000
     Margins.RightMargin = 0.000000000000000000
-    Margins.BottomMargin = 0.000000000000000000
+    Margins.BottomMargin = -10.000000000000000000
     DataSource = Form4.DataSource1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack

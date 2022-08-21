@@ -9,4 +9,5 @@ Sistema feito para Emissão de Cheque em folha A4 com save em banco de dados.
 - Banco de dados MySQL
 - Escreve o valor por extenso
 - Ancoragem para impressão
+- Cheque Cruzado || Nominal
 ```
